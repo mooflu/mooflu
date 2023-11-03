@@ -4,6 +4,8 @@ import { styled } from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import Button from '@mui/material/Button';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import PlayCircleIcon from '@mui/icons-material/PlayCircle';
 
 import critterImage from './assets/critter.png';
 import shaaftImage from './assets/shaaft.png';
@@ -73,9 +75,21 @@ const Critter: React.FC = () => {
                     <Button
                         variant="contained"
                         color="primary"
+                        startIcon={<PlayCircleIcon />}
+                        target="_blank"
                         href="https://mooflu.github.io/critter/critter.html"
                     >
                         Play in your browser
+                    </Button>
+                    <Button
+                        variant="outlined"
+                        color="primary"
+                        startIcon={<GitHubIcon />}
+                        target="_blank"
+                        href="https://github.com/mooflu/critter"
+                        sx={{ ml: 1 }}
+                    >
+                        Github
                     </Button>
                 </Paper>
             </Grid>
@@ -117,9 +131,21 @@ const Shaaft: React.FC = () => {
                     <Button
                         variant="contained"
                         color="primary"
+                        startIcon={<PlayCircleIcon />}
+                        target="_blank"
                         href="https://mooflu.github.io/shaaft/shaaft.html"
                     >
                         Play in your browser
+                    </Button>
+                    <Button
+                        variant="outlined"
+                        color="primary"
+                        startIcon={<GitHubIcon />}
+                        target="_blank"
+                        href="https://github.com/mooflu/shaaft"
+                        sx={{ ml: 1 }}
+                    >
+                        Github
                     </Button>
                 </Paper>
             </Grid>
@@ -158,9 +184,21 @@ const Cherries: React.FC = () => {
                     <Button
                         variant="contained"
                         color="primary"
+                        startIcon={<PlayCircleIcon />}
+                        target="_blank"
                         href="https://mooflu.github.io/omgcherries/omgcherries.html"
                     >
                         Play in your browser
+                    </Button>
+                    <Button
+                        variant="outlined"
+                        color="primary"
+                        startIcon={<GitHubIcon />}
+                        target="_blank"
+                        href="https://github.com/mooflu/omgcherries"
+                        sx={{ ml: 1 }}
+                    >
+                        Github
                     </Button>
                 </Paper>
             </Grid>
