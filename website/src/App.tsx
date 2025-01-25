@@ -6,10 +6,13 @@ import Paper from '@mui/material/Paper';
 import Button from '@mui/material/Button';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import PlayCircleIcon from '@mui/icons-material/PlayCircle';
+import ControllerIcon from '@mui/icons-material/SportsEsports';
 
+import darkSolarImage from './assets/darkSolar.png';
 import critterImage from './assets/critter.png';
 import shaaftImage from './assets/shaaft.png';
 import cherryImage from './assets/cherry.png';
+import darkSolarSnap from './assets/darkSolarSnap.png';
 import critterSnap from './assets/critterSnap.jpg';
 import shaaftSnap from './assets/shaaftSnap.png';
 import cherrySnap from './assets/cherrySnap.png';
@@ -40,6 +43,63 @@ const GridRoot = styled(Grid)(() => ({
         height: '10rem',
     },
 }));
+
+
+const DarkSolar: React.FC = () => {
+    const darkSolarMsg1 = 'Dark Solar is a "swarmy" galactic conquest type of game.';
+    const darkSolarMsg2 = 'Send your army of ships out to conquer. Select strategic assets via mouse. The last selected object is the destination.';
+    const darkSolarMsg3 = 'You are blue.';
+
+    return (
+        <GridRoot container spacing={3}>
+            <Grid item xs={12} sm={9}>
+                <div className={classes.title}>Dark Solar</div>
+            </Grid>
+            <Grid item xs={12} sm={12}>
+                <Paper className={classes.description}>
+                    <img
+                        className={classes.gameIcon}
+                        src={darkSolarImage}
+                        alt=""
+                    />
+                    <div>{darkSolarMsg1}</div>
+                    <br />
+                    <div>{darkSolarMsg2}</div>
+                    <br />
+                    <div>{darkSolarMsg3}</div>
+                    <br />
+                    <div>
+                        <img
+                            className={classes.screenshot}
+                            src={darkSolarSnap}
+                            alt=""
+                        />
+                    </div>
+                    <br />
+                    <Button
+                        variant="contained"
+                        color="primary"
+                        startIcon={<PlayCircleIcon />}
+                        target="_blank"
+                        href="https://mooflu.itch.io/darksolar"
+                    >
+                        Play in your browser (Itch.io)
+                    </Button>
+                    <Button
+                        variant="outlined"
+                        color="primary"
+                        startIcon={<ControllerIcon />}
+                        target="_blank"
+                        href="https://mooflu.itch.io/"
+                        sx={{ ml: 1 }}
+                    >
+                        Itch.io
+                    </Button>
+                </Paper>
+            </Grid>
+        </GridRoot>
+    );
+};
 
 const critterMsg1 = 'Critical Mass (aka Critter) is a vertical arcade shooter. Save the world while you fly through some beautiful space scenery filled with stars and nebulas.';
 const critterMsg2 = 'Your world has been infested by an aggressive army of space critters. Overrun and unprepared, your government was unable to defend its precious resources. As a last effort to recapture some of the “goodies”, you have been placed into a tiny spacecraft and sent after them.';
@@ -227,6 +287,9 @@ const AppRoot = styled('div')(() => ({
 const App: React.FC = () => {
     return (
         <AppRoot>
+            <Paper className={classes.gameCard} elevation={3}>
+                <DarkSolar />
+            </Paper>
             <Paper className={classes.gameCard} elevation={3}>
                 <Shaaft />
             </Paper>
