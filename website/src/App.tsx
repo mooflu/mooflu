@@ -16,6 +16,7 @@ import darkSolarSnap from './assets/darkSolarSnap.png';
 import critterSnap from './assets/critterSnap.jpg';
 import shaaftSnap from './assets/shaaftSnap.png';
 import cherrySnap from './assets/cherrySnap.png';
+// import moo from './assets/moo.svg';
 
 const PREFIX = 'MyApp';
 const classes = {
@@ -300,7 +301,7 @@ const App: React.FC = () => {
                 <Cherries />
             </Paper>
             <div className={classes.footer}>
-                Copyright (C) 2023 Frank Becker
+                Copyright (C) 2025 Frank Becker <img height="12" src="https://github.com/mooflu/mooflu/releases/download/moo/moo.svg" alt="Moo" />
             </div>
         </AppRoot>
     );
