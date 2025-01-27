@@ -301,7 +301,7 @@ const App: React.FC = () => {
                 <Cherries />
             </Paper>
             <div className={classes.footer}>
-                Copyright (C) 2025 Frank Becker <img height="12" src="https://github.com/mooflu/mooflu/releases/download/moo/moo.svg" alt="Moo" />
+                Copyright (C) 2025 Frank Becker <img height="12" src="https://github.com/mooflu/mooflu/releases/download/moo/moo.png" alt="Moo" />
             </div>
         </AppRoot>
     );
